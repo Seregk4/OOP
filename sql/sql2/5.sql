@@ -18,7 +18,6 @@ SAVEPOINT sp1;
 
 INSERT INTO orders (order_date) VALUES (NOW()) RETURNING id;
 
--- вставки товаров.
 -- если ошибка откат
 ROLLBACK TO sp1;
 
